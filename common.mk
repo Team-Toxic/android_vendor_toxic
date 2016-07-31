@@ -167,8 +167,8 @@ TOXIC_MOD_VERSION := TOXIC_$(TOXIC_BUILD)_$(ANDROID_VERSION)_$(shell date +%Y%m%
 
 PRODUCT_PROPERTY_OVERRIDES += \
     BUILD_DISPLAY_ID=$(BUILD_ID) \
-    ro.xos.version=$(XOS_VERSION) \
-    ro.mod.version=$(XOS_BUILD_TYPE)-v0.1-alpha \
+    ro.toxic.version=$(TOXIC_VERSION) \
+    ro.mod.version=$(TOXIC_BUILD_TYPE)-v0.1-preview \
     
 $(call inherit-product-if-exists, vendor/extra/product.mk)
 
