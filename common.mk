@@ -155,20 +155,20 @@ endif
 
 # Version
 ANDROID_VERSION = 6.0.1
-TOXIC_VERSION = 0.1
+TOXIC_VERSION_NUMBER = 0.1
 ifndef TOXIC_BUILD_TYPE
     TOXIC_BUILD_TYPE := preview1
     PLATFORM_VERSION_CODENAME := preview1
 endif
 
 # Set all versions
-TOXIC_VERSION := TOXIC_$(TOXIC_BUILD)_$(ANDROID_VERSION)_$(shell date +%Y%m%d)_$(TOXIC_VERSION)-$(TOXIC_BUILD_TYPE)
-TOXIC_MOD_VERSION := TOXIC_$(TOXIC_BUILD)_$(ANDROID_VERSION)_$(shell date +%Y%m%d)_$(TOXIC_VERSION)-$(TOXIC_BUILD_TYPE)
+TOXIC_VERSION := TOXIC_$(TOXIC_BUILD)_$(ANDROID_VERSION)_$(shell date +%Y%m%d)_$(TOXIC_VERSION_NUMBER)-$(TOXIC_BUILD_TYPE)
+TOXIC_MOD_VERSION := TOXIC_$(TOXIC_BUILD)_$(ANDROID_VERSION)_$(shell date +%Y%m%d)_$(TOXIC_VERSION_NUMBER)-$(TOXIC_BUILD_TYPE)
 
 PRODUCT_PROPERTY_OVERRIDES += \
     BUILD_DISPLAY_ID=$(BUILD_ID) \
-    ro.toxic.version=$(TOXIC_VERSION) \
-    ro.mod.version=$(TOXIC_BUILD_TYPE)-v0.1-preview \
+    ro.toxic.version=$(TOXIC_VERSION_NUMBER) \
+    ro.mod.version=$(TOXIC_BUILD_TYPE)-v$(TOXIC_VERSION_NUMBER) \
     
 $(call inherit-product-if-exists, vendor/extra/product.mk)
 
