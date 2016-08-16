@@ -104,6 +104,11 @@ PRODUCT_PACKAGES += \
     masquerade \
     Terminal
 
+# Required Packages
+ PRODUCT_PACKAGES += \
+     SlimLauncher \
+     CMFileManager 
+ 
 # Stagefright FFMPEG plugin
 PRODUCT_PACKAGES += \
     libffmpeg_extractor \
